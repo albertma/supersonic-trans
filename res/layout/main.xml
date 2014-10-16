@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:id="@+id/curr_audio_freq" 
+    android:text=""
+    style="@android:style/TextAppearance.Large"
+    android:layout_weight="0.25"/>
+<EditText android:layout_width="match_parent" android:id="@+id/editText1" android:layout_height="wrap_content">
+    <requestFocus></requestFocus>
+</EditText>
+
+<LinearLayout android:id="@+id/linearLayout1"
+	android:layout_height="wrap_content" android:layout_width="match_parent"
+	android:gravity="center_horizontal" android:weightSum="1">
+	<Button android:text="Listen" android:id="@+id/listen_button"
+		android:enabled="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:onClick="onRecordData"
+		android:layout_weight="0.19"></Button>
+	<Button android:text="Stop" android:id="@+id/stop_button"
+		android:enabled="false" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:onClick="onStopAction"
+		android:layout_weight="0.23"></Button>
+	<Button android:layout_weight="0.19" android:text="Send"
+		android:layout_width="wrap_content" android:id="@+id/send_button"
+		android:layout_height="wrap_content"
+		android:onClick="onSendData"></Button>
+</LinearLayout>
+</LinearLayout>
